@@ -1,0 +1,306 @@
+/* <---- SET UP ----> */
+
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+	background-image: url(assets/dark-leather.png);
+	background-color: #572d61;
+}
+
+h1, h3, h4, p {
+	font-family: 'IM Fell DW Pica', serif;
+}
+
+main {
+	position: relative;
+	margin: 40px;
+	width: calc(100vw - 80px);
+	min-height: calc(100vh - 80px);
+	border: solid 20px #431c53;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+}
+
+h1 {
+	text-transform: lowercase;
+	font-size: 100px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #e3dac9;
+}
+
+h4 {
+	color: #e3dac9;
+	text-transform: lowercase;
+	text-align: center;
+	font-size: 25px;
+	margin: 15px 0;
+	padding: 0;
+}
+
+.welcome {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0;
+}
+
+.welcome p {
+	font-size: 20px;
+	text-align: center;
+	width: 425px;
+	color: #e3dac9;
+}
+
+section.three-card-spread {
+	display: none;
+	max-width: 1600px;
+}
+
+.table-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	text-align: center;
+}
+
+.card-wrapper {
+	margin: 25px 20px;
+	width: 400px;
+	height: 500px;
+	border: solid 10px #D4AF37;
+	border-radius: 25px;
+	padding: 5px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	background-color: #e3dac9;
+}
+
+.card {
+	height: 95%;
+	width: 250px;
+	position: relative;
+}
+
+.front {
+	background: center / cover no-repeat url(assets/card-back.jpg);
+	border: 5px solid #eff2f4;
+	border-radius: 25px;
+}
+
+.back {
+	border: 5px solid #eff2f4;
+	border-radius: 25px;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+}
+
+.front, .back {
+	position: absolute;
+	backface-visibility: hidden;
+	perspective: 800px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transition: transform 2s ease-in-out;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 100px;
+	background-color: #D4AF37;
+	color: white;
+	margin: 60px 0;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.button:hover, .card:hover {
+	cursor: crosshair;
+}
+
+p.moon {
+	font-size: 25px;
+	font-weight: bold;
+	transition: transform 1s linear;
+	color: #431c53;
+}
+
+h3 {
+	text-align: center;
+	font-size: 50px;
+	margin: 25px 0 0 0;
+	padding: 0;
+	text-transform: lowercase;
+	color: #e3dac9;
+}
+
+.card-description {
+	width: 400px;
+	margin: 10px 0 40px 0;
+	font-size: 20px;
+	border: solid 10px #D4AF37;
+	border-radius: 25px;
+	padding: 10px;
+	background-color: #e3dac9;
+	min-height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.card-description p {
+	margin: 0;
+	padding: 0;
+}
+
+.card-description div {
+	display: none;
+}
+
+footer {
+	height: 150px;
+	background-color: #431c53;
+	display: none;
+	padding: 43px 0;
+}
+
+footer div {
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+footer p {
+	margin: 5px;
+	font-size: 16px;
+	color: #e3dac9;
+}
+
+/* <---- CSS ANIMATIONS ----> */
+
+.card:hover .front{
+	transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(0deg);
+}
+
+.perm-hover {
+	z-index: 10;
+	transform: none;
+}
+
+.button:hover .moon {
+	transform: rotate(360deg);
+}
+
+
+/* <---- CARD IMAGES ----> */
+
+.the-fool {
+	background: center / cover no-repeat url(assets/card-images/the-fool.jpg);
+}
+
+.the-magician {
+	background: center / cover no-repeat url(assets/card-images/the-magician.jpg);
+}
+
+.the-high-priestess {
+	background: center / cover no-repeat url(assets/card-images/the-high-priestess.jpg);
+}
+
+.the-empress {
+	background: center / cover no-repeat url(assets/card-images/the-empress.jpg);
+}
+
+.the-emperor {
+	background: center / cover no-repeat url(assets/card-images/the-emperor.jpg);
+}
+
+.the-hierophant {
+	background: center / cover no-repeat url(assets/card-images/the-hierophant.jpg);
+}
+
+.the-lovers {
+	background: center / cover no-repeat url(assets/card-images/the-lovers.jpg);
+}
+
+.the-chariot {
+	background: center / cover no-repeat url(assets/card-images/the-chariot.jpg);
+}
+
+.strength {
+	background: center / cover no-repeat url(assets/card-images/strength.jpg);
+}
+
+.the-hermit {
+	background: center / cover no-repeat url(assets/card-images/the-hermit.jpg);
+}
+
+.wheel-of-fortune {
+	background: center / cover no-repeat url(assets/card-images/wheel-of-fortune.jpg);
+}
+
+.justice {
+	background: center / cover no-repeat url(assets/card-images/justice.jpg);
+}
+
+.the-hanged-man {
+	background: center / cover no-repeat url(assets/card-images/the-hanged-man.jpg);
+}
+
+.death {
+	background: center / cover no-repeat url(assets/card-images/death.jpg);
+}
+
+.temperance {
+	background: center / cover no-repeat url(assets/card-images/temperance.jpg);
+}
+
+.the-devil {
+	background: center / cover no-repeat url(assets/card-images/the-devil.jpg);
+}
+
+.the-tower {
+	background: center / cover no-repeat url(assets/card-images/the-tower.jpg);
+}
+
+.the-star {
+	background: center / cover no-repeat url(assets/card-images/the-star.jpg);
+}
+
+.the-moon {
+	background: center / cover no-repeat url(assets/card-images/the-moon.jpg);
+}
+
+.the-sun {
+	background: center / cover no-repeat url(assets/card-images/the-sun.jpg);
+}
+
+.judgement {
+	background: center / cover no-repeat url(assets/card-images/judgement.jpg);
+}
+
+.the-world {
+	background: center / cover no-repeat url(assets/card-images/the-world.jpg);
+}
+
+
